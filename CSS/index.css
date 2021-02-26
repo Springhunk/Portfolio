@@ -27,6 +27,9 @@ palenight dracula gruvbox edge tender github atom one dark?
     --h1-color: #8fbcbb;
     --h1-hover: #B8D8D9;
 
+    --contact-h1-color: var(--nord4);
+    --contact-h1-hover-color: var(--nord6);
+
     --main-color: var(--nord6);
 
     --about-p-bg: var(--nord1);
@@ -358,6 +361,10 @@ nav a:hover {
     line-height: 1.6em;
 }
 
+.main div {
+    overflow: hidden;
+}
+
 .main h1 {
     font-size: 43px;
     right: 6%;
@@ -432,6 +439,36 @@ nav a:hover {
 
 .first-svg, .second-p, .third-svg {
     margin-left: 50px;
+}
+
+.contact-section {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 15vh;
+    padding-right: 15vh;
+}
+
+.contact-section div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-section a {
+    text-decoration: none;
+}
+
+.contact-section h1 {
+    color: var(--contact-h1-color);
+}
+
+.contact-section h1:hover {
+    color: var(--contact-h1-hover-color);
+}
+
+.contact-section img {
+    margin-top: 10vh;
 }
 
 [data-scroll] {
@@ -579,13 +616,6 @@ footer > div {
         -o-transform: translateY(-13.5vh);
     }
 
-    .background {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-    }
-
     .main {
         text-align: center;
     }
@@ -596,6 +626,11 @@ footer > div {
 
     .about-section p {
         font-size: 20px;
+    }
+
+    .contact-section div {
+        margin-left: 10vh;
+        margin-right: 10vh;
     }
 
     .content-divider {
@@ -700,6 +735,10 @@ footer > div {
         -o-transform: translateY(-8vh);
     }
 
+    .main h1 {
+        font-size: 25px;
+    }
+
     .about-section {
         padding: 100px 0 80px 0;
     }
@@ -721,8 +760,9 @@ footer > div {
         margin-left: 0;
     }
 
-    .main h1 {
-        font-size: 25px;
+    .contact-section div {
+        margin-left: -10vh;
+        margin-right: -10vh;
     }
 
     .content-divider {
@@ -774,5 +814,17 @@ footer > div {
     .about-section p {
         font-size: 15px;
         line-height: 2rem;
+    }
+
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-section div {
+        margin: 0;
+    }
+
+    .contact-section img {
+        margin-top: 3vh;
     }
 }
