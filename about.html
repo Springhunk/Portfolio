@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>My Portfolio</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="CSS/about.css">
+    </head>
+    <body>
+        <div class="container">
+            <header id="myHeader">
+                <nav>
+                    <ul>
+                        <div class="dropdown" id="themes">
+                            <li>
+                                <button onclick="drop_theme()"class="dropbtn"><i class="fa fa-paint-brush"></i> Themes</button>
+                                <div id="dropdown-theme" class="dropdown-content">
+                                    <form>
+                                        <input type="radio" name="theme" value="Nord" id="nord" checked="checked"> Nord</input>
+                                        <br>
+                                        <input type="radio" name="theme" value="Ayu" id="ayu"> Ayu</input>
+                                        <br>
+                                        <input type="radio" name="theme" value="Palenight" id="palenight"> Palenight</input>
+                                        <br>
+                                        <input type="radio" name="theme" value="Polar" id="polar"> Polar</input>
+                                    </form>
+                                </div>
+                            </li>
+                        </div>
+                        <a href="index.html"><li><i class="fa fa-home"></i> Home</li></a>
+                        <div class="dropdown">
+                            <li>
+                                <button onclick="drop_project()" class="dropbtn"><i class="fa fa-desktop"></i> Projects</button>
+                                <div id="dropdown-project" class="dropdown-content">
+                                    <a href="Projects/programming.html">Programming</a>
+                                    <a href="Projects/art.html">Art</a>
+                                </div>
+                            </li>
+                        </div>
+                        <a href="contact.html"><li><i class="fa fa-home"></i> Contact</li></a>                    
+                        <a href="about.html"><li><i class="fa fa-book"></i> About</li></a>
+                    </ul>
+                </nav>
+            </header>
+        
+            <div class="content">
+                <div class="main">
+                    
+                    <a href="#background"><h1><i class="fa fa-book"></i> Introduction</h1></a>
+                    <div class="background">
+                        <div>
+                            <p>
+                                Hello! My name is _____, I started programming when I was young and got really addicted to it and practiced it everyday.
+                                I started with Python which is a programming language and had learned the fundamentals of programming.
+                            </p>
+                        </div>
+                        <br>
+                        <div>
+                            <p>
+                                After about 6 months of programming and coding, I got somewhat good at it but not an expert yet. 
+                                I made several projects for myself, I also played around with Web Development.
+                                I started experimenting with other languages such as C++ so I could manage memory and hardware.
+                            </p>
+                        </div>
+                        <br>
+                        <div>
+                            <p>
+                                I then kept switching to other languages such as C# and Java which were very similar and easy for me to pick
+                                up since I had learned basic C++. I started to implement some data structures in Java and make
+                                simple games with C# and Unity.
+                            </p>
+                        </div>
+                        <br>
+                        <div>
+                            <p>
+                                I played around with Blender which is a 3d Modelling Application so I could make my own 3d Models in Unity without having to rely on the Unity Game Assets Store.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="title">
+
+                </div>
+
+                <div class="menu">
+                    <label>Explore</label>
+                    <ul>
+                        <li>Home</li>
+                        <li>Projects</li>
+                        <li>About</li>
+                    </ul>
+                </div>
+
+                <div class="contact">
+                    <label>Contact</label>
+                    <ul>
+                        <li>Youtube</li>
+                        <li>Github</li>
+                        <li>Discord</li>
+                    </ul>
+                </div>
+
+                <div class="technologies">
+                    <label>Technologies Used</label> 
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <script src="JS/dropdown.js"></script>
+    </body>
+</html>
