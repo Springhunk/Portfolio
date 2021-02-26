@@ -1,0 +1,140 @@
+/* Top Right Bottom Left */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #2f4252;
+}
+
+body.invert-all > * {
+    background-color: #FDFDFF;
+    filter: invert(100%);
+    transition: 0.75s ease-in-out;
+}
+
+#container {
+    width: 95%;
+    margin: auto;
+}
+
+#header {
+    background-color: #6a95ad;
+    font-family: "Cascadia Mono", Arial, Helvetica, sans-serif, "Consolas", Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 3px;
+    border: 3px;
+    border-style: ridge;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: #FDFDFF;
+}
+
+#header.invert-all {
+    filter: invert(100%);
+}
+
+#invert {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: left;
+    transform: translateY(-50px);
+}
+
+#header h1 {
+    padding: 0;
+    font-size: 40px;
+    transform: translateY(30px);
+}
+
+#header a {
+    color: #FDFDFF;
+}
+
+#header a:hover {
+    color: #3d3d42;
+    transition: 0.2s ease-in-out;
+}
+
+#header ul {
+    text-align: right;
+    padding: 0px 20px 30px;
+    transform: translateY(-35px);
+}
+
+#header ul li{
+    font-family: 'Roboto';
+    font-size: 25px;
+    float: right;
+    padding-right: 30px;
+    border: 15px;
+    list-style-type: none;
+}
+
+#content {
+    padding: 200px;
+    left: 0;
+    right: 0;
+    font-family: 'Titillium Web';
+}
+
+#main {
+    padding: 150px 15px 50px 15px;
+    font-size: 30px;
+    color: #FDFDFF;
+    line-height: 1.6em;
+}
+
+#main a {
+    color: #FDFDFF;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#main.invert-all {
+    filter: invert(100%);
+}
+
+#main h1 {
+    padding: 0;
+    font-size: 40px;
+    text-align: center;
+    transform: translateX(-50px)
+}
+
+#main h1:hover {
+    color: #B8DBD9;
+}
+
+#projects {
+    display: flex;
+}
+
+#projects div {
+    border: 5px #ccc solid;
+    padding: 10px;
+}
+
+#p1 {
+    flex: 2;
+}
+
+#p2 {
+    flex: auto;
+}
+
+#p3 {
+    flex: 1;
+}
+
+#footer {
+    color: #DADFF7;
+    transform: translateX(-40px);
+}

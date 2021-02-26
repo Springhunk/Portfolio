@@ -1,0 +1,332 @@
+/* Top Right Bottom Left */
+/* Themes to add 
+palenight dracula gruvbox edge tender github atom one dark?
+*/
+@import "../Packages/node_modules/nord/src/nord.css";
+
+
+:root {
+    --body-bg: var(--nord0);
+    --header: var(--nord3);
+    --header-color: #b8f5f4;
+    --header-a-after: var(--nord6);
+    --header-a-hover: var(--nord6);
+    --drop-button: var(--nord3);
+    --dropdown-content-bg: var(--nord6);
+    --dropdown-content-a: var(--nord0);
+    --dropdown-content-form: var(--nord0);
+    --dropdown-content-a-after: var(--nord8);
+    --dropdown-content-a-hover-color: var(--nord3);
+    --dropdown-content-a-hover-bg: var(--nord9);
+    --h1-color: #8fbcbb;
+    --h1-hover: #B8D8D9;
+    --main-color: var(--nord6);
+    --p-bg: var(--nord1);
+    --footer-bg: var(--nord10);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 0.10rem;
+}
+
+a {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.container {
+    background-color: var(--nord0);
+    margin: auto;
+}
+
+header {
+    background-color: var(--nord3);
+    font-family: "Source Sans Pro","Cascadia Mono", Arial, Helvetica, sans-serif, "Consolas", Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#themes {
+    padding: 0px 20px 0px 20px;
+    font-family: 'Roboto';
+    float: left;
+}
+
+nav a {
+    color: var(--header-color);
+    display: inline-block;
+    position: relative;
+    transition: 0.4s ease-out;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--nord6);
+    transform-origin: center;
+    transition: transform 0.2s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1) translateY(30px);
+    transform-origin: center;
+}
+
+nav a:hover {
+    color: var(--nord6);
+    transition: 0.2s ease-in;
+}
+
+nav ul {
+    font-family: 'Roboto';
+    text-align: right;
+    padding: 0px 20px;
+    transform: translateY(-25px);
+}
+
+nav ul li{
+    font-size: 30px;
+    transform: translateY(30px);
+    float: right;
+    padding-right: 30px;
+    border: 15px;
+    list-style-type: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropbtn {
+    background-color: var(--nord3);
+    border: none;
+    color: var(--header-color);
+    font-size: 30px;
+    font-family: 'Roboto';
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align: left;
+    border-radius: 5px;
+    font-size: 22px;
+    background-color: var(--nord6);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--nord0);
+    padding: 16px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content form {
+    color: var(--nord0);
+    padding: 16px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a::after {
+    content: '';
+    background-color: var(--nord8);
+}
+
+.dropdown-content a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    width: 100%;
+}
+
+.dropdown-content a:hover {
+    color: var(--nord3);
+    background-color: var(--nord9);
+}
+
+.show {
+    display: block;
+}
+
+.content {
+    padding: 200px;
+    left: 0;
+    right: 0;
+    font-family: 'Titillium Web';
+}
+
+.main {
+    padding: 150px 15px 50px 15px;
+    font-size: 30px;
+    text-align: center;
+    color: var(--nord6);
+    line-height: 1.6em;
+}
+
+.main a {
+    color: var(--nord6);
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+.main h1 {
+    font-size: 43px;
+    right: 6%;
+    display: inline;
+    transition: 0.4s ease-out;
+    color: #8fbcbb;
+}
+
+.main h1:hover {
+    color: #B8DBD9;
+    transition: 0.2s ease-in
+}
+
+.background {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main p {
+    background-color: var(--nord1);
+    padding: 30px;
+    margin: 25px;
+    border: 10px solid var(--nord2);
+    border-radius: 15px;
+    box-shadow: 5px 10px #252933;
+    transition: 0.4s ease-out;
+}
+
+.main p:hover { 
+    padding: 40px;
+    font-size: 32px;
+    transition: 0.3s ease-in;
+    box-shadow: 15px 20px #252933;
+}
+
+footer {
+    position: relative;
+    margin: -55px;
+    padding: 20px 50px 250px 60px;
+    width: 100%;
+    right: 0;
+    left: 0;
+    transform: translateX(1px);
+    background-color: var(--nord10); 
+}
+
+@media screen and (max-width: 1024px) {
+    #themes h1 {
+        font-size: 15px;
+        transform: translateY(-20px);
+    }
+
+    nav ul {
+        display: grid;
+    }
+
+    nav ul li {
+        font-size: 15px;
+    }
+
+    .dropbtn {
+        font-size: 15px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .main {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .main h1 {
+        font-size: 20px;
+    }
+
+    .background {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px;
+    }
+    .main p:hover { 
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    #themes h1 {
+        font-size: 10px;
+        transform: translateY(-12px);
+    }
+    
+    nav ul {
+        display: grid;
+    }
+
+    nav ul li {
+        font-size: 10px;
+        padding-right: 45px;
+    }
+
+    .dropbtn {
+        font-size: 10px;
+    }
+
+    .content {
+        padding: 0px;
+    }
+
+    .main {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .main h1 {
+        font-size: 15px;
+    }
+
+    .background {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 5px;
+    }
+    .main p { 
+        font-size: 15px;
+    }
+}
