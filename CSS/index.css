@@ -44,6 +44,80 @@ palenight dracula gruvbox edge tender github atom one dark?
     --footer-a-color-hover: var(--nord7);
 }
 
+.ayu-theme {
+    --container-bg: var(--nord0);
+
+    --nav-bg: var(--nord0);
+    --nav-color: #abe4e3;
+    --nav-a-hover: var(--nord6);
+
+    --button-bg: var(--nord2);
+    --button-hover: var(--nord1);
+
+    --dropdown-content-bg: var(--nord6);
+    --dropdown-content-form: var(--nord0);
+
+    --hero-button-hover-color: var(--nord0);
+    --hero-image: url("../Images/hero2.jpg");
+    --hero-text-color: var(--nord6);
+
+    --h1-color: #8fbcbb;
+    --h1-hover: #B8D8D9;
+
+    --contact-h1-color: var(--nord4);
+    --contact-h1-hover-color: var(--nord6);
+
+    --main-color: var(--nord6);
+
+    --about-p-bg: var(--nord1);
+    --about-first-div-bg: var(--nord0-2);
+    --about-second-div-bg: var(--nord0);
+    --about-third-div-bg: var(--nord0-2);
+
+
+    --footer-bg: var(--nord0-2);
+    --footer-categories: var(--nord6);
+    --footer-color: var(--nord4);
+    --footer-a-color-hover: var(--nord7);
+}
+
+.palenight-theme {
+    --container-bg: var(--nord0);
+
+    --nav-bg: var(--nord0);
+    --nav-color: #abe4e3;
+    --nav-a-hover: var(--nord6);
+
+    --button-bg: var(--nord2);
+    --button-hover: var(--nord1);
+
+    --dropdown-content-bg: var(--nord6);
+    --dropdown-content-form: var(--nord0);
+
+    --hero-button-hover-color: var(--nord0);
+    --hero-image: url("../Images/hero3.jpg");
+    --hero-text-color: var(--nord6);
+
+    --h1-color: #8fbcbb;
+    --h1-hover: #B8D8D9;
+
+    --contact-h1-color: var(--nord4);
+    --contact-h1-hover-color: var(--nord6);
+
+    --main-color: var(--nord6);
+
+    --about-p-bg: var(--nord1);
+    --about-first-div-bg: var(--nord0-2);
+    --about-second-div-bg: var(--nord0);
+    --about-third-div-bg: var(--nord0-2);
+
+
+    --footer-bg: var(--nord0-2);
+    --footer-categories: var(--nord6);
+    --footer-color: var(--nord4);
+    --footer-a-color-hover: var(--nord7);
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -365,16 +439,6 @@ nav a:hover {
     overflow: hidden;
 }
 
-.main h1 {
-    font-size: 43px;
-    right: 6%;
-    transition: 0.4s ease-out;
-    -moz-transition: 0.4s ease-out;
-    -webkit-transition: 0.4s ease-out;
-    -o-transition: 0.4s ease-out;
-    color: #8fbcbb;
-}
-
 .main h1:hover {
     color: #B8DBD9;
     transition: 0.2s ease-in;
@@ -390,10 +454,6 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-.about-section h1 {
-    align-self: center;
 }
 
 .about-section div {
@@ -461,14 +521,30 @@ nav a:hover {
 
 .contact-section h1 {
     color: var(--contact-h1-color);
+    font-size: 45px;
 }
 
 .contact-section h1:hover {
     color: var(--contact-h1-hover-color);
+    font-size: 50px;
 }
 
 .contact-section img {
     margin-top: 10vh;
+}
+
+.contact-section img:hover {
+    animation: logo 1s ease-out;
+    transform-origin: center;
+}
+
+@keyframes logo {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
 }
 
 [data-scroll] {
@@ -620,10 +696,6 @@ footer > div {
         text-align: center;
     }
 
-    .main h1 {
-        font-size: 30px;
-    }
-
     .about-section p {
         font-size: 20px;
     }
@@ -631,6 +703,14 @@ footer > div {
     .contact-section div {
         margin-left: 10vh;
         margin-right: 10vh;
+    }
+
+    .contact-section h1 {
+        font-size: 30px;
+    }
+
+    .contact-section h1:hover {
+        font-size: 35px;
     }
 
     .content-divider {
@@ -735,10 +815,6 @@ footer > div {
         -o-transform: translateY(-8vh);
     }
 
-    .main h1 {
-        font-size: 25px;
-    }
-
     .about-section {
         padding: 100px 0 80px 0;
     }
@@ -763,6 +839,14 @@ footer > div {
     .contact-section div {
         margin-left: -10vh;
         margin-right: -10vh;
+    }
+
+    .contact-section h1 {
+        font-size: 25px;
+    }
+
+    .contact-section h1:hover {
+        font-size: 30px;
     }
 
     .content-divider {

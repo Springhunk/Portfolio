@@ -192,24 +192,6 @@ nav a:hover {
     line-height: 1.6em;
 }
 
-.main h1 {
-    font-size: 43px;
-    right: 6%;
-    transition: 0.4s ease-out;
-    -moz-transition: 0.4s ease-out;
-    -webkit-transition: 0.4s ease-out;
-    -o-transition: 0.4s ease-out;
-    /* color: #8fbcbb; */
-}
-
-.main h1:hover {
-    /* color: #B8DBD9; */
-    transition: 0.2s ease-in;
-    -moz-transition: 0.2s ease-in;
-    -webkit-transition: 0.2s ease-in;
-    -o-transition: 0.2s ease-in;
-}
-
 .contact-section {
     display: flex;
     position: relative;
@@ -235,11 +217,27 @@ nav a:hover {
 
 .contact-section h1:hover {
     color: var(--contact-h1-hover-color);
+    font-size: 50px;
 }
 
 .contact-section img {
     margin-top: 10vh;
 }
+
+.contact-section img:hover {
+    animation: logo 1s ease-out;
+    transform-origin: center;
+}
+
+@keyframes logo {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
 
 [data-scroll] {
     transition: transform 1s;
@@ -369,6 +367,15 @@ footer > div {
         margin-right: 10vh;
     }
 
+    .contact-section h1 {
+        font-size: 30px;
+    }
+
+    .contact-section h1:hover {
+        font-size: 35px;
+    }
+
+
     .content-divider {
         transform: rotate(180deg) translateY(5.5vh);
         -moz-transform: rotate(180deg) translateY(5.5vh);
@@ -442,8 +449,12 @@ footer > div {
         padding: 10px;
     }
 
-    .main h1 {
+    .contact-section h1 {
         font-size: 25px;
+    }
+
+    .contact-section h1:hover {
+        font-size: 30px;
     }
 
     .content-divider {

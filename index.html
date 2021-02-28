@@ -14,13 +14,13 @@
         <link rel="stylesheet" type="text/css" href="CSS/index.css">
         <link rel="shortcut icon" href="Images/Vaporwave.svg" type="image/x-icon">
     </head>
-    <body onload="window.scrollTo(0,document.documentElement.scrollTop+1)">
-        <div class="container">
+    <body onload="window.scrollTo(0,document.documentElement.scrollTop+2)">
+        <div class="container" id="container">
             <nav>
                 <div class="dropdown themes">
                     <button onclick="drop_theme()" class="dropbtn theme-btn"><i class="fa fa-paint-brush"></i> Themes</button>
                     <div id="dropdown-theme" class="dropdown-content">
-                        <form>
+                        <form id="theme-form">
                             <label>
                                 <input type="radio" name="theme" value="Nord" id="nord" checked="checked"> Nord</input>
                             </label>
@@ -38,6 +38,8 @@
                             </label>
                         </form>
                     </div>
+                    <script src="JS/themes.js"></script>
+                    <script src="JS/dropdown.js"></script>
                 </div>
 
                 <div class="home separated">
@@ -69,7 +71,7 @@
                 <div class="hero">
                     <div class="hero-bg">
                         <div class="hero-text rellax" data-rellax-speed="-7">
-                            <div><h1>First Lastname</h1></div>
+                            <div><h1>Springhunk</h1></div>
                             <div><h2>A Developer</h2></div>
                             <div>
                                 <button>
@@ -85,13 +87,12 @@
             <div class="content">
                 <div class="main" id="main">
                     <div class="about-section" id="about-section">
-                        <h1 data-scroll>About Me</h1>
                         <div class="first-div">
                             <svg class="first-wave wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2e3440" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,208C672,235,768,245,864,218.7C960,192,1056,128,1152,112C1248,96,1344,128,1392,144L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
                             <div data-scroll class="first-inner-div inner-div">
                                 <div class="first-p">
                                     <p>
-                                        Hello! My name is _____, I started programming when I was young and got really addicted to it and practiced it everyday.
+                                        Hello! My name is Springhunk, I started programming when I was young and got really addicted to it and practiced it everyday.
                                         I started with Python since it was the easiest to learn.
                                     </p>
                                 </div>
@@ -207,6 +208,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous"></script>
         <script src="JS/parallax.js"></script>
         <script src="JS/transparent.js"></script>
-        <script src="JS/dropdown.js"></script>
     </body>
 </html>
