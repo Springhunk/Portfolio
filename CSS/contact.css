@@ -37,6 +37,28 @@ palenight dracula gruvbox edge tender github atom one dark?
     --footer-a-color-hover: var(--nord7);
 }
 
+[data-scroll] {
+    transition: transform 1s;
+    -moz-transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+[data-scroll="in"] {
+    transform: translateY(0);
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+[data-scroll="out"] {
+    transform: translateY(15%);
+    -moz-transform: translateY(15%);
+    -webkit-transform: translateY(15%);
+    -o-transform: translateY(15%);
+}
+
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -213,48 +235,51 @@ nav a:hover {
 
 .contact-section h1 {
     color: var(--contact-h1-color);
+    font-size: 45px;
+    transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
 }
 
 .contact-section h1:hover {
     color: var(--contact-h1-hover-color);
     font-size: 50px;
+    transition: 0.2s ease-in;
+    -moz-transition: 0.2s ease-in;
+    -webkit-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
 }
 
 .contact-section img {
-    margin-top: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
 }
 
 .contact-section img:hover {
     animation: logo 1s ease-out;
+    -moz-animation: logo 1s ease-out;
+    -webkit-animation: logo 1s ease-out;
+    -o-animation: logo 1s ease-out;
     transform-origin: center;
+    -moz-transform-origin: center;
+    -webkit-transform-origin: center;
+    -o-transform-origin: center;
 }
 
 @keyframes logo {
     from {
         transform: rotateZ(0);
+        -moz-transform: rotateZ(0);
+        -webkit-transform: rotateZ(0);
+        -o-transform: rotateZ(0);
     }
     to {
         transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
     }
-}
-
-
-[data-scroll] {
-    transition: transform 1s;
-}
-
-[data-scroll="in"] {
-    transform: translateY(0);
-    -moz-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -o-transform: translateY(0);
-}
-
-[data-scroll="out"] {
-    transform: translateY(15%);
-    -moz-transform: translateY(15%);
-    -webkit-transform: translateY(15%);
-    -o-transform: translateY(15%);
 }
 
 .content-divider {

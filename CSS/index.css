@@ -118,6 +118,28 @@ palenight dracula gruvbox edge tender github atom one dark?
     --footer-a-color-hover: var(--nord7);
 }
 
+[data-scroll] {
+    transition: transform 1s;
+    -moz-transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+[data-scroll="in"] {
+    transform: translateY(0);
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+[data-scroll="out"] {
+    transform: translateY(15%);
+    -moz-transform: translateY(15%);
+    -webkit-transform: translateY(15%);
+    -o-transform: translateY(15%);
+}
+
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -311,7 +333,58 @@ nav a:hover {
         transform: translateY(-4vh);
         -moz-transform: translateY(-4vh);
         -webkit-transform: translateY(-4vh);
-        -o-transform: translateY(-5vh);
+        -o-transform: translateY(-4vh);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes Hero-Text {
+    0% {
+        opacity: 0%;
+        transform: translateY(-4vh);
+        -moz-transform: translateY(-4vh);
+        -webkit-transform: translateY(-4vh);
+        -o-transform: translateY(-4vh);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes Hero-Text {
+    0% {
+        opacity: 0%;
+        transform: translateY(-4vh);
+        -moz-transform: translateY(-4vh);
+        -webkit-transform: translateY(-4vh);
+        -o-transform: translateY(-4vh);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+@-o-keyframes Hero-Text {
+    0% {
+        opacity: 0%;
+        transform: translateY(-4vh);
+        -moz-transform: translateY(-4vh);
+        -webkit-transform: translateY(-4vh);
+        -o-transform: translateY(-4vh);
     }
     100% {
         opacity: 100%;
@@ -346,6 +419,57 @@ nav a:hover {
 }
 
 @keyframes Description {
+    0%, 25% {
+        opacity: 0%;
+        transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -webkit-transform: translateY(-50px);
+        -o-transform: translateY(-50px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+}
+
+@-moz-keyframes Description {
+    0%, 25% {
+        opacity: 0%;
+        transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -webkit-transform: translateY(-50px);
+        -o-transform: translateY(-50px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes Description {
+    0%, 25% {
+        opacity: 0%;
+        transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -webkit-transform: translateY(-50px);
+        -o-transform: translateY(-50px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+}
+
+@-o-keyframes Description {
     0%, 25% {
         opacity: 0%;
         transform: translateY(-50px);
@@ -413,6 +537,57 @@ nav a:hover {
     }
 }
 
+@-moz-keyframes Hero-Button {
+    0%, 50% {
+        opacity: 0%;
+        transform: translateY(-75px);
+        -moz-transform: translateY(-75px);
+        -webkit-transform: translateY(-75px);
+        -o-transform: translateY(-75px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes Hero-Button {
+    0%, 50% {
+        opacity: 0%;
+        transform: translateY(-75px);
+        -moz-transform: translateY(-75px);
+        -webkit-transform: translateY(-75px);
+        -o-transform: translateY(-75px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+@-o-keyframes Hero-Button {
+    0%, 50% {
+        opacity: 0%;
+        transform: translateY(-75px);
+        -moz-transform: translateY(-75px);
+        -webkit-transform: translateY(-75px);
+        -o-transform: translateY(-75px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
 .hero-divider {
     display: block;
     position: absolute;
@@ -458,7 +633,7 @@ nav a:hover {
 
 .about-section div {
     color: var(--main-color);
-    padding-bottom: 3vh;
+    padding-bottom: 2vh;
     overflow: hidden;
 }
 
@@ -470,14 +645,20 @@ nav a:hover {
 
 .first-div {
     background-color: var(--about-first-div-bg);
+    width: 100%;
+    height: auto;
 }
 
 .second-div {
     background-color: var(--about-second-div-bg);
+    width: 100%;
+    height: auto;
 }
 
 .third-div {
     background-color: var(--about-third-div-bg);
+    width: 100%;
+    height: auto;
 }
 
 .inner-div {
@@ -488,17 +669,104 @@ nav a:hover {
     padding-left: 15vh;
 }
 
+.inner-p {
+    animation: float 6s ease-in-out infinite;
+    -moz-animation: float 6s ease-in-out infinite;
+    -webkit-animation: float 6s ease-in-out infinite;
+    -o-animation: float 6s ease-in-out infinite;
+}
+
 .inner-svg {
+    animation: float 6s ease-in-out infinite;
+    -moz-animation: float 6s ease-in-out infinite;
+    -webkit-animation: float 6s ease-in-out infinite;
+    -o-animation: float 6s ease-in-out infinite;
     width: 100%;
     height: auto;
 }
 
-.first-p, .second-svg, .third-p {
-    margin-right: 50px;
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		-o-transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+		-moz-transform: translateY(-20px);
+		-webkit-transform: translateY(-20px);
+		-o-transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		-o-transform: translateY(0px);
+	}
 }
 
-.first-svg, .second-p, .third-svg {
-    margin-left: 50px;
+@-moz-keyframes float {
+	0% {
+		transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		-o-transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+		-moz-transform: translateY(-20px);
+		-webkit-transform: translateY(-20px);
+		-o-transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		-o-transform: translateY(0px);
+	}
+}
+
+@-webkit-keyframes float {
+	0% {
+		transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		-o-transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+		-moz-transform: translateY(-20px);
+		-webkit-transform: translateY(-20px);
+		-o-transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		-o-transform: translateY(0px);
+	}
+}
+
+@-o-keyframes float {
+	0% {
+		transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		-o-transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+		-moz-transform: translateY(-20px);
+		-webkit-transform: translateY(-20px);
+		-o-transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+		-o-transform: translateY(0px);
+	}
 }
 
 .contact-section {
@@ -522,49 +790,51 @@ nav a:hover {
 .contact-section h1 {
     color: var(--contact-h1-color);
     font-size: 45px;
+    transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
 }
 
 .contact-section h1:hover {
     color: var(--contact-h1-hover-color);
     font-size: 50px;
+    transition: 0.2s ease-in;
+    -moz-transition: 0.2s ease-in;
+    -webkit-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
 }
 
 .contact-section img {
-    margin-top: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .contact-section img:hover {
     animation: logo 1s ease-out;
+    -moz-animation: logo 1s ease-out;
+    -webkit-animation: logo 1s ease-out;
+    -o-animation: logo 1s ease-out;
     transform-origin: center;
+    -moz-transform-origin: center;
+    -webkit-transform-origin: center;
+    -o-transform-origin: center;
 }
 
 @keyframes logo {
     from {
         transform: rotateZ(0);
+        -moz-transform: rotateZ(0);
+        -webkit-transform: rotateZ(0);
+        -o-transform: rotateZ(0);
     }
     to {
         transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
     }
 }
-
-[data-scroll] {
-    transition: transform 1s;
-}
-
-[data-scroll="in"] {
-    transform: translateY(0);
-    -moz-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -o-transform: translateY(0);
-}
-
-[data-scroll="out"] {
-    transform: translateY(15%);
-    -moz-transform: translateY(15%);
-    -webkit-transform: translateY(15%);
-    -o-transform: translateY(15%);
-}
-
 
 .content-divider {
     transform: rotate(180deg) translateY(19.5vh);
@@ -828,14 +1098,6 @@ footer > div {
         flex-direction: column;
     }
 
-    .first-p, .second-svg, .third-p {
-        margin-right: 0;
-    }
-
-    .first-svg, .second-p, .third-svg {
-        margin-left: 0;
-    }
-
     .contact-section div {
         margin-left: -10vh;
         margin-right: -10vh;
@@ -912,3 +1174,11 @@ footer > div {
         margin-top: 3vh;
     }
 }
+
+@media screen and (min-width: 3840px) {
+    .hero-text {
+        margin-top: 10vh;
+    }
+}
+
+/* https://stackoverflow.com/questions/45327641/css-display-page-on-4k-screen-the-same-as-on-fhd */
