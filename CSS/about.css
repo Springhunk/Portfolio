@@ -10,6 +10,7 @@ palenight dracula gruvbox edge tender github atom one dark?
 :root {
     --container-bg: var(--nord0);
 
+    --hamburger-menu-color: var(--nord8);
     --nav-bg: var(--nord0);
     --nav-color: #abe4e3;
     --nav-a-hover: var(--nord6);
@@ -22,6 +23,39 @@ palenight dracula gruvbox edge tender github atom one dark?
 
     --h1-color: #8fbcbb;
     --h1-hover: #B8D8D9;
+
+    --main-color: var(--nord6);
+
+    --about-p-bg: var(--nord1);
+    --about-first-div-bg: var(--nord0-2);
+    --about-second-div-bg: var(--nord0);
+    --about-third-div-bg: var(--nord0-2);
+
+
+    --footer-bg: var(--nord0-2);
+    --footer-categories: var(--nord6);
+    --footer-color: var(--nord4);
+    --footer-a-color-hover: var(--nord7);
+}
+
+.ayu-theme {
+    --container-bg: #0a0E14;
+
+    --nav-bg: var(--nord0);
+    --nav-color: #abe4e3;
+    --nav-a-hover: var(--nord6);
+
+    --button-bg: var(--nord2);
+    --button-hover: var(--nord1);
+
+    --dropdown-content-bg: var(--nord6);
+    --dropdown-content-form: var(--nord0);
+
+    --h1-color: #8fbcbb;
+    --h1-hover: #B8D8D9;
+
+    --contact-h1-color: var(--nord4);
+    --contact-h1-hover-color: var(--nord6);
 
     --main-color: var(--nord6);
 
@@ -85,6 +119,12 @@ a {
 }
 
 nav {
+    z-index: 1;
+    font-family: 'Roboto';
+    position: fixed;
+}
+
+.nav-items {
     background-color: var(--nav-bg);
     margin-bottom: 20px;
     padding-left: 5px;
@@ -92,7 +132,6 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    font-family: 'Roboto';
     list-style-type: none;
     padding: 20px 20px;
     font-size: 30px;
@@ -100,7 +139,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 nav button {
@@ -374,9 +413,84 @@ footer > div {
 
 
 @media screen and (max-width: 1280px) {
+    .themes {
+        margin-right: 0;
+    }
+
+    .nav-items {
+        width: 0;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: unset;
+        margin: 0;
+        padding: 0 0 5px 0;
+        opacity: 0;
+        background-color: rgba(46, 52, 64, 0.7);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20% 0 0 60%;
+        transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+    }
+
+    .nav-items-show {
+        width: 400px;
+        transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        opacity: 1;
+    }
+
     nav button {
         font-size: 20px;
         border-radius: 5px;
+        margin: 10px 0 10px 0;
+    }
+
+    .hamburger-menu {
+        width: 35px;
+        height: 30px;
+        top: 50px;
+        right: 50px;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        z-index: 4;
+    }
+
+    .line {
+        width: 100%;
+        height: 3px;
+        background-color: var(--hamburger-menu-color);
+        transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+
+    .line-change .line-1 {
+        transform: rotateZ(-405deg) translate(-8px, 6px);
+        -moz-transform: rotateZ(-405deg) translate(-8px, 6px);
+        -webkit-transform: rotateZ(-405deg) translate(-8px, 6px);
+        -o-transform: rotateZ(-405deg) translate(-8px, 6px);
+    }
+
+    .line-change .line-2 {
+        opacity: 0;
+    }
+
+    .line-change .line-3 {
+        transform: rotateZ(405deg) translate(-8px, -6px);
+        -moz-transform: rotateZ(405deg) translate(-8px, -6px);
+        -webkit-transform: rotateZ(405deg) translate(-8px, -6px);
+        -o-transform: rotateZ(405deg) translate(-8px, -6px);
     }
 
     .separated {
@@ -443,14 +557,6 @@ footer > div {
 }
 
 @media screen and (max-width: 812px) {
-    .themes {
-        margin-right: 0;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
     nav button {
         font-size: 15px;
         border-radius: 3px;
@@ -493,6 +599,9 @@ footer > div {
 
     .content-divider {
         transform: rotate(180deg) translateY(10vh);
+        -moz-transform: rotate(180deg) translateY(10vh);
+        -webkit-transform: rotate(180deg) translateY(10vh);
+        -o-transform: rotate(180deg) translateY(10vh);
     }
 
     footer {
@@ -525,8 +634,26 @@ footer > div {
 }
 
 @media screen and (max-width: 414px) {
+    nav button {
+        font-size: 25px;
+        border-radius: 5px;
+        margin: 20px 0 20px 0;
+    }
+
+    .nav-items {
+        border-radius: 0;
+    }
+
+    .nav-items-show {
+        width: 100%;
+        opacity: 1;
+    }
+
     .content-divider {
         transform: rotate(180deg) translateY(5.5vh);
+        -moz-transform: rotate(180deg) translateY(5.5vh);
+        -webkit-transform: rotate(180deg) translateY(5.5vh);
+        -o-transform: rotate(180deg) translateY(5.5vh);
     }
 
     .hero-text {
@@ -543,8 +670,8 @@ footer > div {
     }
 }
 
-@media screen and (max-width: 2000px) {
-    main {
-        font-size: 55px;
+@media screen and (min-width: 3840px) {
+    .main {
+        font-size: 35px;
     }
 }

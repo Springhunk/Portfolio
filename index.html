@@ -17,54 +17,64 @@
     <body onload="window.scrollTo(0,document.documentElement.scrollTop+2)">
         <div class="container" id="container">
             <nav>
-                <div class="dropdown themes">
-                    <button onclick="drop_theme()" class="dropbtn theme-btn"><i class="fa fa-paint-brush"></i> Themes</button>
-                    <div id="dropdown-theme" class="dropdown-content">
-                        <form id="theme-form">
-                            <label>
-                                <input type="radio" name="theme" value="Nord" id="nord" checked="checked"> Nord</input>
-                            </label>
-                                <br>
-                            <label>
-                                <input type="radio" name="theme" value="Ayu" id="ayu"> Ayu</input>
-                            </label>
-                                <br>
-                            <label>
-                                <input type="radio" name="theme" value="Palenight" id="palenight"> Palenight</input>
-                            </label>
-                                <br>
-                            <label>
-                                <input type="radio" name="theme" value="Polar" id="polar"> Polar</input>
-                            </label>
-                        </form>
+                <div onclick="openNav()" class="hamburger-menu">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+
+                <div class="nav-items">
+                    <div class="dropdown themes">
+                        <button onclick="drop_theme()" class="dropbtn theme-btn"><i class="fa fa-paint-brush"></i> Themes</button>
+                        <div id="dropdown-theme" class="dropdown-content">
+                            <form id="theme-form">
+                                <label>
+                                    <input type="radio" name="theme" value="Nord" id="nord" checked="checked"> Nord</input>
+                                </label>
+                                    <br>
+                                <label>
+                                    <input type="radio" name="theme" value="Ayu" id="ayu"> Ayu</input>
+                                </label>
+                                    <br>
+                                <label>
+                                    <input type="radio" name="theme" value="Palenight" id="palenight"> Palenight</input>
+                                </label>
+                                    <br>
+                                <label>
+                                    <input type="radio" name="theme" value="Polar" id="polar"> Polar</input>
+                                </label>
+                            </form>
+                        </div>
+                        <script src="JS/themes.js"></script>
+                        <script src="JS/dropdown.js"></script>
                     </div>
-                    <script src="JS/themes.js"></script>
-                    <script src="JS/dropdown.js"></script>
-                </div>
 
-                <div class="home separated">
-                    <button>
-                        <a href="index.html"><i class="fa fa-home"></i> Home</a>
-                    </button>
-                </div>
-                
-                <div class="dropdown separated">
-                    <button>
-                        <a href="projects.html"><i class="fa fa-desktop"></i> Projects</a>
-                    </button>
-                </div>
+                    <div class="home separated">
+                        <button>
+                            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+                        </button>
+                    </div>
+                    
+                    <div class="dropdown separated">
+                        <button>
+                            <a href="projects.html"><i class="fa fa-desktop"></i> Projects</a>
+                        </button>
+                    </div>
 
-                <div class="contact separated">
-                    <button>
-                        <a href="#contact-section"><i class="fa fa-phone"></i> Contact</a>
-                    </button>
-                </div>
+                    <div class="contact separated">
+                        <button>
+                            <a href="#contact-section"><i class="fa fa-phone"></i> Contact</a>
+                        </button>
+                    </div>
 
-                <div class="about separated">
-                    <button>
-                        <a href="#about-section"><i class="fa fa-book"></i> About</a>
-                    </button>
+                    <div class="about separated">
+                        <button>
+                            <a href="#about-section"><i class="fa fa-book"></i> About</a>
+                        </button>
+                    </div>
                 </div>
+                <script src="JS/menu.js"></script>
+                <script src="JS/transparent.js"></script>
             </nav>
         
             <header>
@@ -87,7 +97,7 @@
             <div class="content">
                 <div class="main" id="main">
                     <div class="about-section" id="about-section">
-                        <div class="first-div">
+                        <div id="first-div" class="first-div">
                             <svg class="first-wave wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2e3440" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,208C672,235,768,245,864,218.7C960,192,1056,128,1152,112C1248,96,1344,128,1392,144L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
                             <div data-scroll class="first-inner-div inner-div">
                                 <div class="first-p inner-p">
@@ -103,8 +113,7 @@
                             </div>
                         </div>
                         <svg class="second-wave wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#292e38" fill-opacity="1" d="M0,160L48,133.3C96,107,192,53,288,53.3C384,53,480,107,576,122.7C672,139,768,117,864,101.3C960,85,1056,75,1152,85.3C1248,96,1344,128,1392,144L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-                        <br>
-                        <div class="second-div">
+                        <div id="second-div" class="second-div">
                             <div data-scroll class="second-inner-div inner-div">
                                 <div class="second-svg inner-svg">
                                     <img src="Images/Undraw_Programming.svg" alt="">
@@ -118,8 +127,7 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
-                        <div class="third-div">
+                        <div id="third-div" class="third-div">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2e3440" fill-opacity="1" d="M0,128L48,149.3C96,171,192,213,288,192C384,171,480,85,576,53.3C672,21,768,43,864,48C960,53,1056,43,1152,42.7C1248,43,1344,53,1392,58.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
 
                             <div data-scroll class="third-inner-div inner-div">
@@ -138,7 +146,6 @@
                     </div>
 
                     <div class="contact-section" id="contact-section">
-                        <!-- <h1 data-scroll>Contact</h1> -->
                         <div class="youtube">
                             <a href="https://www.youtube.com/channel/UCfgUaH5aHLDDGAqFjg48lLQ" target="_blank">
                                 <h1>Youtube</h1>
@@ -207,6 +214,5 @@
         <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous"></script>
         <script src="JS/parallax.js"></script>
-        <script src="JS/transparent.js"></script>
     </body>
 </html>

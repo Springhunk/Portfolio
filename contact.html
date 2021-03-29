@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>My Portfolio</title>
+        <title>Contact</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
@@ -17,54 +17,63 @@
     <body onload="window.scrollTo(0,document.documentElement.scrollTop+1)">
         <div class="container">
             <nav>
-                <div class="dropdown themes">
-                    <button onclick="drop_theme()" class="dropbtn theme-btn"><i class="fa fa-paint-brush"></i> Themes</button>
-                    <div id="dropdown-theme" class="dropdown-content">
-                        <form id="theme-form">
-                            <label>
-                                <input type="radio" name="theme" value="Nord" id="nord" checked="checked"> Nord</input>
-                            </label>
-                                <br>
-                            <label>
-                                <input type="radio" name="theme" value="Ayu" id="ayu"> Ayu</input>
-                            </label>
-                                <br>
-                            <label>
-                                <input type="radio" name="theme" value="Palenight" id="palenight"> Palenight</input>
-                            </label>
-                                <br>
-                            <label>
-                                <input type="radio" name="theme" value="Polar" id="polar"> Polar</input>
-                            </label>
-                        </form>
+                <div onclick="openNav()" class="hamburger-menu">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+
+                <div class="nav-items">
+                    <div class="dropdown themes">
+                        <button onclick="drop_theme()" class="dropbtn theme-btn"><i class="fa fa-paint-brush"></i> Themes</button>
+                        <div id="dropdown-theme" class="dropdown-content">
+                            <form id="theme-form">
+                                <label>
+                                    <input type="radio" name="theme" value="Nord" id="nord" checked="checked"> Nord</input>
+                                </label>
+                                    <br>
+                                <label>
+                                    <input type="radio" name="theme" value="Ayu" id="ayu"> Ayu</input>
+                                </label>
+                                    <br>
+                                <label>
+                                    <input type="radio" name="theme" value="Palenight" id="palenight"> Palenight</input>
+                                </label>
+                                    <br>
+                                <label>
+                                    <input type="radio" name="theme" value="Polar" id="polar"> Polar</input>
+                                </label>
+                            </form>
+                        </div>
+                        <script src="JS/themes.js"></script>
+                        <script src="JS/dropdown.js"></script>
                     </div>
-                    <script src="JS/dropdown.js"></script>
-                    <script src="JS/themes.js"></script>
-                </div>
 
-                <div class="home separated">
-                    <button>
-                        <a href="index.html"><i class="fa fa-home"></i> Home</a>
-                    </button>
-                </div>
-                
-                <div class="dropdown separated">
-                    <button>
-                        <a href="projects.html"><i class="fa fa-desktop"></i> Projects</a>
-                    </button>
-                </div>
+                    <div class="home separated">
+                        <button>
+                            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+                        </button>
+                    </div>
+                    
+                    <div class="dropdown separated">
+                        <button>
+                            <a href="projects.html"><i class="fa fa-desktop"></i> Projects</a>
+                        </button>
+                    </div>
 
-                <div class="contact separated">
-                    <button>
-                        <a href="contact.html"><i class="fa fa-phone"></i> Contact</a>
-                    </button>
-                </div>
+                    <div class="contact separated">
+                        <button>
+                            <a href="#contact-section"><i class="fa fa-phone"></i> Contact</a>
+                        </button>
+                    </div>
 
-                <div class="about separated">
-                    <button>
-                        <a href="about.html"><i class="fa fa-book"></i> About</a>
-                    </button>
+                    <div class="about separated">
+                        <button>
+                            <a href="about.html"><i class="fa fa-book"></i> About</a>
+                        </button>
+                    </div>
                 </div>
+                <script src="JS/menu.js"></script>
             </nav>
 
             <div class="content">
@@ -137,8 +146,5 @@
             </footer>
         </div>
         <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous"></script>
-        <script src="JS/parallax.js"></script>
-        <script src="JS/transparent.js"></script>
     </body>
 </html>
